@@ -2,7 +2,9 @@
 FPS = 60
 
 # Coches
-CAR_SPEED = 3
+CAR_SPEED = 2  # Reducir velocidad para animaciones más suaves
+CAR_SPAWN_CHANCE = 0.4 # Cada SPAWN_SPEED habra una probabilidad del SPAWN_CHANCE de que un coche aparezca
+CAR_SPAWN_SPEED = 60 # 1 segundo
 
 # Colores
 WHITE = (255, 255, 255)

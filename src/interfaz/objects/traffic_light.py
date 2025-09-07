@@ -27,9 +27,9 @@ class TrafficLight:
             cars_waiting (int): Número de coches esperando en la intersección.
         """
         # Autoajuste: más coches esperando = más tiempo en verde
-        # Minimo de 5 segundos + 1 segundo por coche en espera
-        self.green_time = (FPS*5) + FPS * cars_waiting
-        self.green_time = min(self.green_time, FPS*10)  # máx. 10 segundos
+        # Minimo de 5 segundos + 2 segundos por coche en espera
+        self.green_time = (FPS*5) + ((FPS*2) * cars_waiting)
+        self.green_time = min(self.green_time, FPS*12)  # máx. 12 segundos
 
         self.timer += 1
         if self.color == GREEN and self.timer > self.green_time:
